@@ -1,5 +1,7 @@
 <template>
-  <checkout-form></checkout-form>
+  <div class="container">
+    <checkout-form></checkout-form>
+  </div>
 </template>
 
 <script>
@@ -14,12 +16,27 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.container {
+  width: 70rem;
+  margin: auto;
+}
+
+.primaryBtn {
+  background-color: cadetblue;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
 </style>
