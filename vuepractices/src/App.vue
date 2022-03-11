@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <checkout-form></checkout-form>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CheckoutForm from './components/CheckoutForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CheckoutForm
   }
 }
 </script>
