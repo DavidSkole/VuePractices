@@ -35,6 +35,15 @@
   </div>
 </template>
 
+<script>
+export default {
+	setup() {
+		
+	}
+}
+</script>
+
+
 <style>
 .checkout-container {
   display: flex;
@@ -46,11 +55,11 @@
   padding: 2rem 4rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 5px solid cadetblue;
+  border: 5px solid #2c3e50;
 }
 
 .right-section {
-  background-color: cadetblue;
+  background-color: #2c3e50;
   width: 30%;
   padding: 2rem;
   border-top-right-radius: 10px;
@@ -97,7 +106,7 @@ input, select {
   padding: 10px;
   border-radius: 2px;
   border: none;
-  border-bottom: 2px solid rgb(226, 226, 226);
+  border-bottom: 3px solid rgb(177, 204, 211);
   -webkit-appearance: none;
 }
 

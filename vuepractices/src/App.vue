@@ -1,17 +1,20 @@
 <template>
   <div class="container">
-    <checkout-form></checkout-form>
+	<h1>Vue Challenges</h1>
+	<nav>
+		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
+		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
+		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
+		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
+	</nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import CheckoutForm from './components/CheckoutForm.vue'
 
 export default {
-  name: 'App',
-  components: {
-    CheckoutForm
-  }
+
 }
 </script>
 
@@ -26,13 +29,26 @@ export default {
   margin-top: 60px;
 }
 
+html {
+	background-color: rgb(26, 34, 44);
+}
+
 .container {
   width: 70rem;
   margin: auto;
 }
 
+.nav-button {
+	color: aquamarine;
+	background-color: #2c3e50;
+	display: inline-block;
+	padding: 1rem 2rem;
+	margin: 1rem 2rem 2rem 0;
+	border-radius: 5px;
+}
+
 .primaryBtn {
-  background-color: cadetblue;
+  background-color: #2c3e50;
   color: white;
   padding: 15px;
   border: none;
