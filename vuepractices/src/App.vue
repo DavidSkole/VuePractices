@@ -34,9 +34,20 @@ export default {
 .primaryBtn {
   background-color: cadetblue;
   color: white;
-  padding: 10px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   font-weight: 600;
+  margin-top: 2rem;
+}
+
+.primaryBtn:hover{
+	cursor: pointer;
+	background-color: rgb(73, 139, 141);
+}
+
+h1{
+	font-size: 25px;
+	color: rgb(33, 90, 92);
 }
 </style>
