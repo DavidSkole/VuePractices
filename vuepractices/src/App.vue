@@ -14,7 +14,9 @@
 <script>
 
 export default {
-
+  setup() {
+    
+  }
 }
 </script>
 
@@ -33,6 +35,18 @@ html {
 	background-color: rgb(26, 34, 44);
 }
 
+.alert {
+  position: absolute;
+  top:1rem;
+  left:0;
+  right:0;
+  width: 30rem;
+  margin: auto;
+  background-color: aliceblue;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
 .container {
   width: 70rem;
   margin: auto;
@@ -45,6 +59,10 @@ html {
 	padding: 1rem 2rem;
 	margin: 1rem 2rem 2rem 0;
 	border-radius: 5px;
+}
+
+.nav-button:hover{
+  background-color: #243647;
 }
 
 .primaryBtn {

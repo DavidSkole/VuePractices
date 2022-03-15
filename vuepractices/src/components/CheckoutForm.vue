@@ -1,26 +1,27 @@
 <template>
   <div class="checkout-container">
+    <div class="alert" v-if="data.AlertVisible == true">{{ data.AlertMessage }}</div>
       <div class="left-section">
         <div class="personal-info">
           <h1><span class="numberOrder">1</span> Personal Information</h1>
-          <input type="text" name="firstName" class="wLeft" placeholder="First name">
-          <input type="text" name="lastName" class="wRight" placeholder="Last name">
-          <input type="text" name="email" class="w100" placeholder="Email">
+          <input type="text" name="firstName" class="wLeft" placeholder="First name" v-model="data.FirstName[0]" :class="{ MissingFieldClass : data.FirstName[1] }">
+          <input type="text" name="lastName" class="wRight" placeholder="Last name" v-model="data.LastName[0]">
+          <input type="text" name="email" class="w100" placeholder="Email" v-model="data.EMail[0]">
           <select name="country" class="wLeft">
             <option value="usa">United States</option>
             <option value="norway">Norway</option>
             <option value="chine">China</option>
           </select>
-          <input type="number" name="postal" class="wRight" placeholder="Postal Code">
-          <input type="number" name="phone" class="w100" placeholder="Phone Number">
+          <input type="number" name="postal" class="wRight" placeholder="Postal Code" v-model="data.PostalCode[0]">
+          <input type="number" name="phone" class="w100" placeholder="Phone Number" v-model="data.PhoneNumber[0]">
         </div>
         <div class="payment">
           <h1><span class="numberOrder">2</span> Payment Details</h1>
-          <input type="number" name="creditcard" class="w100" placeholder="Credit Card Number">  
-          <input type="number" name="securityCode" class="wLeft" placeholder="Security Code">
-          <input type="number" name="expirationDate" class="wRight" placeholder="Expiration Date">
+          <input type="number" name="creditcard" class="w100" placeholder="Credit Card Number" v-model="data.CreditCardNumber[0]">   
+          <input type="number" name="securityCode" class="wLeft" placeholder="Security Code" v-model="data.CreditCardNumber[0]">
+          <input type="number" name="expirationDate" class="wRight" placeholder="Expiration Date" v-model="data.CreditCardNumber[0]">
         </div>
-        <button class="primaryBtn">Checkout</button>
+        <button class="primaryBtn" @click="buttonClick">Checkout</button>
       </div>
       <div class="right-section">
 		<div class="checkout-info">
@@ -36,9 +37,35 @@
 </template>
 
 <script>
+import { reactive } from 'vue'
+
 export default {
 	setup() {
-		
+		let data = reactive({
+      FirstName: ["", false],
+      LastName: ["", false],
+      EMail: ["", false],
+      Country: ["", false],
+      PostalCode: ["", false],
+      PhoneNumber: ["", false],
+      CreditCardNumber: ["", false],
+      SecurityCode: ["", false],
+      ExpirationDate: ["", false],
+      AlertMessage: ["", false],
+      AlertVisible: false,
+    });
+
+    function buttonClick() {
+      this.showAlert();
+    }
+
+    function showAlert() {
+      data.FirstName[1] = true;
+      data.AlertMessage = "Wait! You need to fill out the fields in red"
+      console.log(data.FirstName[1])
+    }
+
+    return { data, buttonClick, showAlert }
 	}
 }
 </script>
@@ -121,7 +148,7 @@ select {
     linear-gradient(to right, #ccc, #ccc);
   background-position:
     calc(101% - 20px) calc(1em + 3px),
-    calc(101% - 15px) calc(1em + 3px),
+    calc(101% - 16px) calc(1em + 3px),
     calc(101% - 2.9em);
   background-size:
     5px 5px,
@@ -151,5 +178,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .wLeft {
   width: 49%;
   float: left;
+}
+
+.MissingFieldClass {
+  background-color: rgb(245, 236, 236);
+  border-bottom: 3px solid rgb(173, 97, 97);
 }
 </style>
