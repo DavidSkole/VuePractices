@@ -24,7 +24,7 @@
       </div>
       <div class="right-section">
 		<div class="checkout-info">
-			<h1 class="checkoutHeader">Checkout info</h1>
+			<h1 class="checkoutHeader">Order Summary</h1>
 			<p class="checkout-item">Sweater <span class="right light">39.99$</span></p>
 			<p class="checkout-item">Pants <span class="right light">29.99$</span></p>
 			<p class="checkout-item">Socks <span class="right light">9.99$</span></p>
