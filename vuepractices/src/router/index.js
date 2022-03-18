@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CheckoutForm from '../components/CheckoutForm.vue'
+import Calculator from '../components/Calculator.vue'
+import Countdown from '../components/Countdown.vue'
+import ToDo from '../components/ToDo.vue'
 
 const routes = [
 	{
@@ -9,6 +12,18 @@ const routes = [
 	{
 		path: '/checkout',
 		component: CheckoutForm	
+	},
+	{
+		path: '/calculator',
+		component: Calculator
+	},
+	{
+		path: '/countdown',
+		component: Countdown
+	},
+	{
+		path: '/todo',
+		component: ToDo
 	}
 ]
 

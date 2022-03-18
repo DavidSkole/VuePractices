@@ -3,9 +3,9 @@
 	<h1>Vue Challenges</h1>
 	<nav>
 		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
-		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
-		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
-		<router-link to="/checkout"><div class="nav-button">Checkout</div></router-link>
+		<router-link to="/calculator"><div class="nav-button">Calculator</div></router-link>
+		<router-link to="/countdown"><div class="nav-button">Countdown</div></router-link>
+		<router-link to="/todo"><div class="nav-button">To Do</div></router-link>
 	</nav>
     <router-view></router-view>
   </div>
@@ -43,7 +43,7 @@ html {
   width: 30rem;
   margin: auto;
   background-color: aliceblue;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   border-radius: 5px;
 }
 
